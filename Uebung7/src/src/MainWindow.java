@@ -26,7 +26,7 @@ public class MainWindow
 	public JTextField textField = new JTextField(10);
 	public JButton buttonAdd = new JButton("add");
 	public JButton buttonRem = new JButton("remove");
-	public JLabel label = new JLabel();
+	//public JLabel label = new JLabel();
 	
 	
 	public ArrayList<JLabel> list = new ArrayList<JLabel>();	
@@ -51,11 +51,26 @@ public class MainWindow
 				
 				this.panelOben.setBackground(c);
 				String eingabe = textField.getText();
-				System.out.println(eingabe);
-				label.setText(label.getText()+ " " + eingabe);
+				//System.out.println(eingabe);
+				//label.setText(label.getText()+ " " + eingabe);
 				
 				// das hier macht das gleiche, aber ohne eine Variable
 				//label.setText(label.getText()+ " " + textField.getText());
+				
+				//1.) jlabel erzeugen
+				
+				//2.) jlabel konfigurieren ( inhalt, anzeigem farbe, ... )
+				//label.setOpaque(true);
+				//label.setBackground(Color.CYAN);
+				//label.setText("Hallo");
+				
+				//3.) jlabel in list aufnehmen
+				
+				//4.) alle Jlables der liste in das panel einfügen
+				//panelUnten.add(label);
+				
+				//5.) (aus aufgabe) panel neu zeichnen
+				this.panelUnten.revalidate(); 
 			}
 			
 			if(button.getText().equals("remove"))
@@ -66,7 +81,7 @@ public class MainWindow
 				
 				this.panelUnten.setBackground(c);
 				
-				label.setText("");
+				//label.setText("");
 			}
 		}  
 	}
@@ -85,10 +100,10 @@ public class MainWindow
 		panelOben.setBackground(Color.YELLOW);
 		
 		// PANEL UNTEN
-		panelUnten.add(label);
-		label.setOpaque(true);
-		label.setBackground(Color.CYAN);
-		label.setText("Hallo");
+		//panelUnten.add(label);
+		//label.setOpaque(true);
+		//label.setBackground(Color.CYAN);
+		//label.setText("Hallo");
 		
 		// Layout manager (ersetzt content)
 		// alle Panels in das Fenster legen
